@@ -74,11 +74,11 @@ function addChat(input, product) {
   messagesContainer.appendChild(userDiv);
 
   let botDiv = document.createElement("div");
-  let botImg = document.createElement("img");
+  // let botImg = document.createElement("img");
   let botText = document.createElement("span");
   botDiv.id = "bot";
   // botImg.src = "bot-mini.png";
-  botImg.className = "avatar";
+  // botImg.className = "avatar";
   botDiv.className = "bot response";
   botText.innerText = "Typing...";
   botDiv.appendChild(botText);
