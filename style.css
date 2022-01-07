@@ -43,8 +43,12 @@ span {
 ::-webkit-input-placeholder { 
 	color: .711 
 }
- 
-input { 
+
+#buttons {
+	display: flex;
+}
+
+.input { 
 	border: 0; 
 	padding: 15px; 
 	margin-left: auto;

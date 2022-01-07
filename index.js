@@ -1,13 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const inputField = document.getElementById("input");
-  inputField.addEventListener("keydown", (e) => {
-    if (e.code === "Enter") {
-      let input = inputField.value;
-      inputField.value = "";
-      output(input);
-    }
-  });
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   const inputField = document.getElementById("input");
+//   inputField.addEventListener("keydown", (e) => {
+//     if (e.code === "Enter") {
+//       let input = inputField.value;
+//       inputField.value = "";
+//       output(input);
+//     }
+//   });
+
+//   var inputElement = document.getElementsByClassName('input');
+//   inputElement.type = "button"
+//   inputElement.addEventListener('click', function(){
+//       console.log(inputElement.textContent);
+//       output(inputElement.textContent);
+//   });
+// });
+
+function handleClick(id) {
+  const inputField = document.querySelector("#" + id);
+  console.log(inputField.textContent);
+  output(inputField.textContent);
+}
 
 function output(input) {
   let product;
@@ -90,7 +103,7 @@ function addChat(input, product) {
   // Fake delay to seem "real"
   setTimeout(() => {
     botText.innerText = `${product}`;
-    textToSpeech(product)
+    // textToSpeech(product)
   }, 2000
   )
 
