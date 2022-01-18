@@ -31,13 +31,13 @@ function output() {
   setTimeout(() => {
     addChat(product);
     product = "I really didn't like the beeps because I have an auditory condition called tinnitus that make higher-pitched noises feel distressing and painful, but I think you would be okay if you don't have anything like that."
-  }, 4000
+  }, 8000
   )
 
   // Update DOM
   setTimeout(() => {
     addChat(product);
-  }, 8000
+  }, 16000
   )
 }
 
@@ -68,7 +68,7 @@ function addChat(product) {
   setTimeout(() => {
     botText.innerText = `${product}`;
     // textToSpeech(product)
-  }, 4000
+  }, 7000
   )
 
 }

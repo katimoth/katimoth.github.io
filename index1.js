@@ -31,11 +31,11 @@ function output() {
   setTimeout(() => {
     addChat(product);
     product = "One of the noises was pretty annoying, but not painful."
-  }, 4000
+  }, 7000
   )
   setTimeout(() => {
     addChat(product);
-  }, 8000
+  }, 14000
   )
 }
 
@@ -87,7 +87,7 @@ function addChat(product) {
   setTimeout(() => {
     botText.innerText = `${product}`;
     // textToSpeech(product)
-  }, 4000
+  }, 6000
   )
 
 }
