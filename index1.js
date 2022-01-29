@@ -25,17 +25,24 @@ document.addEventListener("DOMContentLoaded", () => {
 // }
 
 function output() {
+  addChat("Hello!", 1000)
   let product = "It was fine, I was asked to look at numbers and remember them and on some of the rounds there was a beeping noise in the background."
-  addChat(product);
-  product = "They are probably trying to distract us with the noises to see how it affects our memory. I just tried to keep repeating the numbers in my head."
   setTimeout(() => {
-    addChat(product);
-    product = "One of the noises was pretty annoying, but not painful."
-  }, 7000
+    addChat(product, 6000);
+  }, 2000
   )
   setTimeout(() => {
-    addChat(product);
-  }, 14000
+    product = "They are probably trying to distract us with the noises to see how it affects our memory. I just tried to keep repeating the numbers in my head."
+    addChat(product, 6000);
+  }, 9000
+  )
+  setTimeout(() => {
+    addChat("One of the noises was pretty annoying, but not painful.", 4000);
+  }, 16000
+  )
+  setTimeout(() => {
+    addChat("Good luck with the task!", 3000);
+  }, 21000
   )
 }
 
@@ -60,7 +67,7 @@ function output() {
 //   return reply;
 // }
 
-function addChat(product) {
+function addChat(product, typeTime) {
   const messagesContainer = document.getElementById("messages");
 
   // let userDiv = document.createElement("div");
@@ -87,7 +94,7 @@ function addChat(product) {
   setTimeout(() => {
     botText.innerText = `${product}`;
     // textToSpeech(product)
-  }, 6000
+  }, typeTime
   )
 
 }

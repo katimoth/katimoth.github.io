@@ -25,23 +25,31 @@ document.addEventListener("DOMContentLoaded", () => {
 // }
 
 function output() {
+  addChat("Hello!", 1000)
   let product = "It was not great. I was asked to look at numbers and remember them and on some of the rounds there was a beeping noise in the background."
-  addChat(product);
+  setTimeout(() => {
+    addChat(product, 7000);
+  }, 2000
+  )
   product = "They are probably trying to distract us with the noises to see how it affects our memory. I just tried to keep repeating the numbers in my head."
   setTimeout(() => {
-    addChat(product);
+    addChat(product, 7000);
     product = "I really didn't like the beeps because I have an auditory condition called tinnitus that make higher-pitched noises feel distressing and painful, but I think you would be okay if you don't have anything like that."
-  }, 8000
+  }, 10000
   )
 
   // Update DOM
   setTimeout(() => {
-    addChat(product);
-  }, 16000
+    addChat(product, 9000);
+  }, 18000
+  )
+  setTimeout(() => {
+    addChat("Good luck with the task!", 2000);
+  }, 28000
   )
 }
 
-function addChat(product) {
+function addChat(product, typeTime) {
   const messagesContainer = document.getElementById("messages");
 
   // let userDiv = document.createElement("div");
@@ -68,7 +76,7 @@ function addChat(product) {
   setTimeout(() => {
     botText.innerText = `${product}`;
     // textToSpeech(product)
-  }, 7000
+  }, typeTime
   )
 
 }
