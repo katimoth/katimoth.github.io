@@ -31,15 +31,15 @@ function output() {
     addChat(product, 7000);
   }, 2000
   )
-  product = "They are probably trying to distract us with the noises to see how it affects our memory. I just tried to keep repeating the numbers in my head."
   setTimeout(() => {
+    product = "They are probably trying to distract us with the noises to see how it affects our memory. I just tried to keep repeating the numbers in my head."
     addChat(product, 7000);
-    product = "I really didn't like the beeps because I have an auditory condition called tinnitus that make higher-pitched noises feel distressing and painful, but I think you would be okay if you don't have anything like that."
   }, 10000
   )
 
   // Update DOM
   setTimeout(() => {
+    product = "I really didn't like the beeps because I have an auditory condition called tinnitus that make higher-pitched noises feel distressing and painful, but I think you would be okay if you don't have anything like that."
     addChat(product, 9000);
   }, 18000
   )
