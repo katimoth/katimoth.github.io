@@ -25,25 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
 // }
 
 function output() {
-  addChat("Hello!", 1000)
-  let product = "It was fine, I was asked to look at numbers and remember them and on some of the rounds there was a beeping noise in the background."
+  addChat("Hi", 1000)
+  let product = "I had to remember numbers that were shown one at a time and sometimes their was a beeping noise that was annoying but not too bad"
   setTimeout(() => {
     addChat(product, 6000);
   }, 2000
   )
   setTimeout(() => {
-    product = "They are probably trying to distract us with the noises to see how it affects our memory. I just tried to keep repeating the numbers in my head."
-    addChat(product, 6000);
+    product = "I just repeated the numbers in my head to help remember"
+    addChat(product, 5000);
   }, 9000
   )
   setTimeout(() => {
-    addChat("One of the noises was pretty annoying, but not painful.", 4000);
-  }, 16000
+    product = "Partner has left the chat."
+    addItalicChat(product);
+  }, 15000
   )
-  setTimeout(() => {
-    addChat("Good luck with the task!", 3000);
-  }, 21000
-  )
+
 }
 
 // function compare(promptsArray, repliesArray, string) {
@@ -96,5 +94,32 @@ function addChat(product, typeTime) {
     // textToSpeech(product)
   }, typeTime
   )
+
+}
+
+function addItalicChat(product) {
+  const messagesContainer = document.getElementById("messages");
+
+  // let userDiv = document.createElement("div");
+  // userDiv.id = "user";
+  // userDiv.className = "user response";
+  // userDiv.innerHTML = `<img src="user.png" class="avatar"><span>${input}</span>`;
+  // messagesContainer.appendChild(userDiv);
+
+  let botDiv = document.createElement("div");
+  // let botImg = document.createElement("img");
+  let botText = document.createElement("span");
+  botDiv.id = "bot";
+  // botImg.src = "bot-mini.png";
+  // botImg.className = "avatar";
+  botDiv.className = "bot response";
+  botText.innerText = `${product}`;
+  botText.style.fontStyle = 'italic';
+  botDiv.appendChild(botText);
+  // botDiv.appendChild(botImg);
+  messagesContainer.appendChild(botDiv);
+  // Keep messages at most recent
+  messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
+
 
 }
